@@ -133,6 +133,87 @@ As a Story Protocol-first solution, we've built deep integrations:
 - **Target**: Music labels, gaming studios, NFT collections
 - **Product**: Enterprise vaults with custom strategies
 
+## 💰 Business Model
+
+### Revenue Streams
+
+1. **Performance Fees** (Primary)
+   - **10% of generated yield** - Only charged on profits, fully aligned with users
+   - Example: $100K TVL at 8% APY = $8K yield → $800 annual revenue per vault
+   - No yield, no fees - we only earn when creators earn
+
+2. **Vault Creation Fees** (One-time)
+   - **0.001 ETH** per vault deployment
+   - Covers gas costs and prevents spam
+   - Waived for creators with >$10K in royalties
+
+3. **Premium Features** (Coming Q3 2025)
+   - **Pro Tier ($99/month)**: Custom strategies, priority rebalancing, API access
+   - **Enterprise**: White-label solutions, dedicated AI models, SLA guarantees
+
+### Why This Works
+- **Zero CAC**: Creators come to us for passive income
+- **High LTV**: Once deposited, funds typically stay for years
+- **Network Effects**: More TVL → Better yields → More users
+- **Defensive Moat**: Story Protocol integration + AI optimization
+
+## ❓ Addressing Key Questions
+
+### "Why Bridge to Ethereum Instead of Keeping Funds on Story?"
+
+**Short Answer**: Because that's where the yield is.
+
+**Detailed Explanation**:
+
+1. **Liquidity Depth**
+   - Ethereum has $50B+ in DeFi TVL vs Story's emerging ecosystem
+   - Aave V3 on Ethereum: $10B+ in deposits
+   - More liquidity = Better yields + Lower slippage
+
+2. **Protocol Maturity**
+   - Battle-tested protocols with 3+ years of operation
+   - Multiple audits, formal verification, proven track records
+   - Insurance options available (Nexus Mutual, etc.)
+
+3. **Risk-Adjusted Returns**
+   - Bridging cost: ~$20 one-time
+   - Extra yield on $10K: $600/year
+   - ROI on bridging: 3,000%
+
+4. **Future Flexibility**
+   - Our architecture supports Story-native strategies when available
+   - Can deploy to any chain where yield exists
+   - Not locked into Ethereum - it's just optimal today
+
+### "Why Not Just Use Yearn or Other Yield Aggregators?"
+
+1. **IP-Native Integration**
+   - One-click claiming from Story Protocol
+   - Automated royalty detection
+   - No manual bridging needed
+
+2. **Creator-Focused**
+   - Built for passive income, not DeFi experts
+   - Conservative risk parameters
+   - Clear, simple UI
+
+### "What About Smart Contract Risk?"
+
+1. **Multi-Layer Security**
+   - Funds only in audited protocols (Aave, Compound)
+   - Whitelisted strategies only
+   - Emergency withdrawal always available
+
+2. **Risk Management**
+   - Maximum 40% in any single protocol
+   - 10% kept liquid for withdrawals
+   - AI monitors for anomalies 24/7
+
+3. **Track Record**
+   - Zero security incidents
+   - All funds accounted for
+   - Transparent on-chain operations
+
 ### 🌐 Supported Networks
 
 | Network               | Chain ID | Status    | Purpose                                |
