@@ -243,12 +243,11 @@ Access monitoring data via the frontend dashboard or API endpoints.
 
 ### AI Architecture
 - **Model**: GPT-4 with custom DeFi prompts
-- **Data Sources**: 15+ on-chain data feeds
+- **Data Sources**: 4+ on-chain data feeds
 - **Decision Frequency**: Every 4 hours or on 5% yield differential
 - **Risk Framework**: Multi-factor scoring with circuit breakers
 
 ### Gas Optimization
-- **Batch Claims**: Up to 50 royalty vaults in one transaction
 - **Multicall**: Single transaction for claim → bridge → deposit
 - **Dynamic Execution**: Only rebalance when profit > gas cost
 - **L2 Ready**: Architecture supports L2 deployment
