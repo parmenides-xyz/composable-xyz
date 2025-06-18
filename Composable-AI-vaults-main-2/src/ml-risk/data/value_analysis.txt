@@ -1,0 +1,1 @@
+📜 Value Analysis:\nMin: 0.00000000\nMax: 0.03040000\nMean: 0.00131494\nZero values: 37\n

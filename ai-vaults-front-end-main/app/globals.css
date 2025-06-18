@@ -1,0 +1,327 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --background: 220 13% 9%;
+  --secondary-background: 224 15% 12%;
+  --foreground: 0 0% 95%;
+  --main-foreground: 0 0% 100%;
+  --main: 271 91% 65%;
+  --border: 240 10% 15%;
+  --ring: 271 91% 65%;
+  --overlay: 0 0% 0% / 0.9;
+  --shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  --chart-1: #8B5CF6;
+  --chart-2: #06B6D4;
+  --chart-3: #10B981;
+  --chart-4: #F59E0B;
+  --chart-5: #EF4444;
+  --chart-active-dot: #8B5CF6;
+  
+  /* Story Protocol inspired palette */
+  --story-purple: 271 91% 65%;
+  --story-cyan: 188 94% 43%;
+  --story-dark: 220 13% 9%;
+  --story-darker: 224 15% 6%;
+  --story-accent: 45 93% 47%;
+  --story-glow: rgba(139, 92, 246, 0.4);
+}
+
+.dark {
+  --background: 220 13% 9%;
+  --secondary-background: 224 15% 12%;
+  --foreground: 0 0% 95%;
+  --main-foreground: 0 0% 100%;
+  --main: 271 91% 65%;
+  --border: 240 10% 15%;
+  --ring: 271 91% 65%;
+  --shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  --chart-1: #8B5CF6;
+  --chart-2: #06B6D4;
+  --chart-3: #10B981;
+  --chart-4: #F59E0B;
+  --chart-5: #EF4444;
+  --chart-active-dot: #8B5CF6;
+}
+
+/* Remove @theme inline directive - using traditional config instead */
+  
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply dark;
+  }
+  
+  body {
+    @apply bg-slate-900 text-slate-100 font-mono;
+    background: 
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent),
+      radial-gradient(ellipse 60% 40% at 50% 120%, rgba(6, 182, 212, 0.1), transparent),
+      linear-gradient(180deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    background-attachment: fixed;
+    font-family: 'JetBrains Mono', 'Geist Mono', monospace;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-wider text-transparent bg-clip-text;
+    background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    text-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+  }
+}
+
+/* ONTOLOGY FINANCE - Story Protocol Inspired 8-bit Futurism */
+@layer components {
+  /* Core Story Protocol aesthetic */
+  .story-card {
+    @apply bg-slate-800/60 backdrop-blur-xl border border-purple-500/30;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
+    box-shadow: 
+      0 0 40px rgba(139, 92, 246, 0.2),
+      inset 0 1px 0 rgba(139, 92, 246, 0.3),
+      0 8px 32px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .story-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+    animation: story-scan 3s infinite;
+  }
+
+  /* 8-bit Parmenidean Forms */
+  .eternal-form {
+    background: linear-gradient(45deg, 
+      #8b5cf6 0%, 
+      #06b6d4 25%, 
+      #10b981 50%, 
+      #06b6d4 75%, 
+      #8b5cf6 100%);
+    background-size: 400% 400%;
+    animation: eternal-being 6s ease-in-out infinite;
+    border: 2px solid rgba(139, 92, 246, 0.5);
+  }
+
+  /* Cubist geometric patterns */
+  .cubist-geometry {
+    clip-path: polygon(
+      0% 20%, 
+      20% 0%, 
+      80% 5%, 
+      100% 25%, 
+      95% 80%, 
+      75% 100%, 
+      25% 95%, 
+      5% 75%
+    );
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .cubist-geometry:hover {
+    clip-path: polygon(
+      5% 15%, 
+      15% 5%, 
+      85% 0%, 
+      95% 20%, 
+      100% 85%, 
+      80% 95%, 
+      20% 100%, 
+      0% 80%
+    );
+  }
+
+  /* 8-bit retro buttons */
+  .retro-8bit {
+    @apply font-mono font-bold text-center uppercase tracking-widest;
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4);
+    border: 3px solid #ffffff;
+    box-shadow: 
+      0 0 0 3px #8b5cf6,
+      6px 6px 0 0 rgba(139, 92, 246, 0.4),
+      6px 6px 0 3px #ffffff;
+    transition: all 0.1s ease;
+    image-rendering: pixelated;
+  }
+
+  .retro-8bit:hover {
+    transform: translate(3px, 3px);
+    box-shadow: 
+      0 0 0 3px #8b5cf6,
+      3px 3px 0 0 rgba(139, 92, 246, 0.4),
+      3px 3px 0 3px #ffffff;
+  }
+
+  .retro-8bit:active {
+    transform: translate(6px, 6px);
+    box-shadow: 
+      0 0 0 3px #8b5cf6,
+      0 0 0 3px #ffffff;
+  }
+
+  /* Parmenidean glow effects */
+  .being-aura {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .being-aura::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+    animation: aura-pulse 4s ease-in-out infinite;
+  }
+
+  /* Story Protocol inspired navbar */
+  .story-nav {
+    @apply bg-slate-900/90 backdrop-blur-xl border-b border-purple-500/30;
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
+  }
+
+  /* Pixel perfect typography */
+  .pixel-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    image-rendering: pixelated;
+    text-shadow: 
+      0 0 10px rgba(139, 92, 246, 0.8),
+      2px 2px 0 rgba(6, 182, 212, 0.5);
+  }
+
+  /* Ontological data visualization */
+  .data-visualization {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    backdrop-filter: blur(20px);
+    position: relative;
+  }
+
+  .data-visualization::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    background: linear-gradient(135deg, #8b5cf6, #06b6d4, #8b5cf6);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+}
+
+/* KEYFRAMES - Story Protocol Inspired Animations */
+@keyframes story-scan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes eternal-being {
+  0%, 100% { 
+    background-position: 0% 50%;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  50% { 
+    background-position: 100% 50%;
+    transform: scale(1.05);
+    filter: hue-rotate(90deg);
+  }
+}
+
+@keyframes aura-pulse {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.6; 
+    transform: scale(1.1);
+  }
+}
+
+@keyframes digital-glitch {
+  0%, 100% { 
+    transform: translateX(0); 
+    filter: hue-rotate(0deg);
+  }
+  20% { 
+    transform: translateX(-2px); 
+    filter: hue-rotate(90deg);
+  }
+  40% { 
+    transform: translateX(2px); 
+    filter: hue-rotate(180deg);
+  }
+  60% { 
+    transform: translateX(-1px); 
+    filter: hue-rotate(270deg);
+  }
+  80% { 
+    transform: translateX(1px); 
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Removed matrix-rain animation to fix scrolling */
+
+/* PARMENIDEAN PHILOSOPHICAL ELEMENTS */
+.parmenidean-wisdom {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background: linear-gradient(45deg, #8b5cf6, #06b6d4, #10b981, #06b6d4, #8b5cf6);
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: eternal-being 8s ease-in-out infinite;
+  text-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+}
+
+/* 8-BIT RETRO AESTHETIC */
+.retro-grid {
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-attachment: fixed;
+}
+
+.cyberpunk-border {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #8b5cf6, #06b6d4, #8b5cf6) 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyberpunk-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #8b5cf6, #06b6d4, #8b5cf6);
+  border-radius: inherit;
+  z-index: -1;
+  animation: eternal-being 3s ease-in-out infinite;
+}

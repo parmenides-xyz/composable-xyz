@@ -1,0 +1,439 @@
+{
+  "outcomes": [],
+  "outcome_1749976526": {
+    "id": "outcome_1749976526",
+    "timestamp": 1749976526.378056,
+    "strategy": {
+      "strategy_type": "royalty_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "claim_and_optimize",
+          "parameters": {
+            "royalty_vault": "0x0b5d50e41aAE56a7F1CA3E626BC17DB4fB8bdc5a",
+            "wrapper_contract": "0x670d84987005083dE65C07672241f46dA678D24A",
+            "tokens": [
+              "0xA0b86991c6218a36c1d19D4a2e9Eb0cE3606eB48"
+            ]
+          }
+        },
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "royalty_vault": "0x0b5d50e41aAE56a7F1CA3E626BC17DB4fB8bdc5a",
+            "token": "USDC",
+            "amount": 0,
+            "strategy": "AAVE V3"
+          }
+        },
+        {
+          "action_type": "supply",
+          "parameters": {
+            "asset": "USDC",
+            "amount": 1.0,
+            "target_protocol": "AAVE V3"
+          }
+        },
+        {
+          "action_type": "borrow",
+          "parameters": {
+            "asset": "USDT",
+            "amount": 0.5,
+            "target_protocol": "AAVE V3"
+          }
+        },
+        {
+          "action_type": "supply",
+          "parameters": {
+            "asset": "USDT",
+            "amount": 0.5,
+            "target_protocol": "AAVE V3"
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 5.16,
+        "risk_level": "low"
+      }
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1749976526.378047,
+      "risk_score": 0.5,
+      "expected_apr": 5.16
+    }
+  },
+  "outcome_1750186939": {
+    "id": "outcome_1750186939",
+    "timestamp": 1750186939.372788,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [],
+      "expected_outcome": {
+        "apr": 5.16,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750186939.372777,
+      "risk_score": 0.5,
+      "expected_apr": 5.16,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750187618": {
+    "id": "outcome_1750187618",
+    "timestamp": 1750187618.853153,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 11,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.05
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 5.16,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750187618.8531358,
+      "risk_score": 0.5,
+      "expected_apr": 5.16,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750187954": {
+    "id": "outcome_1750187954",
+    "timestamp": 1750187954.9131122,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 11,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.05
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 5.0,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750187954.9130309,
+      "risk_score": 0.4144679138028418,
+      "expected_apr": 5.0,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750189983": {
+    "id": "outcome_1750189983",
+    "timestamp": 1750189983.558321,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 11,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.05
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 5.0,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750189983.5582778,
+      "risk_score": 0.41577509910671295,
+      "expected_apr": 5.0,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750204971": {
+    "id": "outcome_1750204971",
+    "timestamp": 1750204971.476192,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 12,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.032846446398096606
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 3.28,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750204971.476158,
+      "risk_score": 0.38302229295327483,
+      "expected_apr": 3.28,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750205354": {
+    "id": "outcome_1750205354",
+    "timestamp": 1750205354.657629,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 13,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.03284653020117016
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 3.28,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750205354.657537,
+      "risk_score": 0.37820475919447505,
+      "expected_apr": 3.28,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750205702": {
+    "id": "outcome_1750205702",
+    "timestamp": 1750205702.731572,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 13,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.032848523685705205
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 3.28,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750205702.731488,
+      "risk_score": 0.37940376676138615,
+      "expected_apr": 3.28,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750205775": {
+    "id": "outcome_1750205775",
+    "timestamp": 1750205775.168959,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 13,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.03284852556961249
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 3.28,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750205775.168929,
+      "risk_score": 0.37940376676138615,
+      "expected_apr": 3.28,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750205883": {
+    "id": "outcome_1750205883",
+    "timestamp": 1750205883.417583,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 13,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.03279278067475298
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 3.28,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750205883.417551,
+      "risk_score": 0.37700931778576674,
+      "expected_apr": 3.28,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750207384": {
+    "id": "outcome_1750207384",
+    "timestamp": 1750207384.4427881,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 13,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.032161179776742495
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 3.22,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750207384.44278,
+      "risk_score": 0.37940376676138615,
+      "expected_apr": 3.22,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750213059": {
+    "id": "outcome_1750213059",
+    "timestamp": 1750213059.131765,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 14,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.03219568280276287
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 3.22,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750213059.1317508,
+      "risk_score": 0.3734442845997429,
+      "expected_apr": 3.22,
+      "deployed_amount": 0
+    }
+  },
+  "outcome_1750213107": {
+    "id": "outcome_1750213107",
+    "timestamp": 1750213107.3897972,
+    "strategy": {
+      "strategy_type": "vault_yield_optimization",
+      "target_protocol": "AAVE V3",
+      "actions": [
+        {
+          "action_type": "deploy_to_strategy",
+          "parameters": {
+            "vault_address": "TBD",
+            "token": "USDC",
+            "amount": 14,
+            "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+            "target_apy": 0.032195683829108174
+          }
+        }
+      ],
+      "expected_outcome": {
+        "apr": 3.22,
+        "risk_level": "low"
+      },
+      "vault_address": "TBD"
+    },
+    "outcome": {
+      "success": true,
+      "executed_at": 1750213107.3897758,
+      "risk_score": 0.3734442845997429,
+      "expected_apr": 3.22,
+      "deployed_amount": 0
+    }
+  }
+}

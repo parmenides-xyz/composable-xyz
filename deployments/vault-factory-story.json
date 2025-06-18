@@ -1,0 +1,18 @@
+{
+  "network": "story",
+  "chainId": "1514",
+  "deployer": "0xd7220db831Ce0c7D33a4fD234208d245225D26d1",
+  "timestamp": "2025-06-13T20:37:27.074Z",
+  "contracts": {
+    "vaultFactory": "0x9ac45538c6d27178650b3a50e39Afe9f0Db26Ca8"
+  },
+  "config": {
+    "defaultManager": "0xd7220db831Ce0c7D33a4fD234208d245225D26d1",
+    "defaultAgent": "0xd7220db831Ce0c7D33a4fD234208d245225D26d1",
+    "treasury": "0xd7220db831Ce0c7D33a4fD234208d245225D26d1",
+    "creationFee": "0.01"
+  },
+  "gasUsed": {
+    "vaultFactory": "TBD"
+  }
+}

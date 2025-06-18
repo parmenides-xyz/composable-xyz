@@ -1,0 +1,290 @@
+# SPQR RoyaltyVault Yield Optimizer Configuration
+
+# RPC Endpoints
+rpc:
+  story: https://mainnet.storyrpc.io
+  ethereum: https://eth-mainnet.g.alchemy.com/v2/exAp0m_LKHnmcM2Uni2BbYH5cLgBYaV2
+  base: https://base-mainnet.g.alchemy.com/v2/exAp0m_LKHnmcM2Uni2BbYH5cLgBYaV2
+  arbitrum: https://arb-mainnet.g.alchemy.com/v2/exAp0m_LKHnmcM2Uni2BbYH5cLgBYaV2
+  optimism: https://opt-mainnet.g.alchemy.com/v2/exAp0m_LKHnmcM2Uni2BbYH5cLgBYaV2
+
+# Network Configuration
+networks:
+  story:
+    chain_id: 1514
+    rpc_url: https://mainnet.storyrpc.io
+    explorer_url: https://storyscan.io
+    name: "Story Protocol"
+    native_currency: "IP"
+
+# Story Protocol Configuration
+story_protocol:
+  # Main Story Protocol contracts on chain 1514
+  royalty_module: "0xD2f60c40fEbccf6311f8B47c4f2Ec6b040400086"  # Story Protocol RoyaltyModule
+  ip_asset_registry: "0x77319B4031e6eF1250907aa00018B8B1c67a244b"  # IPAssetRegistry
+  dispute_module: "0x..."  # DisputeModule address (TBD)
+  grouping_module: "0x..."  # GroupingModule address (TBD)
+  
+  # Our deployed vault on Ethereum for testing
+  example_royalty_vault: "0x670d84987005083dE65C07672241f46dA678D24A"
+  
+  # Deployed Story Integration Contracts (LOCAL HARDHAT)
+  local:
+    vault_factory: "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+    base_vault: "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9"
+    wrapper_address: "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"
+    network: "hardhat"
+    chain_id: 31337
+  
+  # Production deployments on Story Protocol
+  story_mainnet:
+    vault_factory: "TBD"
+    base_vault: "TBD"
+    wrapper_address: "0x670d84987005083dE65C07672241f46dA678D24A"
+    network: "story"
+    chain_id: 1514
+  
+  # Production deployments on Ethereum
+  ethereum_mainnet:
+    vault_address: "0x670d84987005083dE65C07672241f46dA678D24A"  # Our actual vault on Ethereum
+    aave_strategy: "0x8e80115D162D0026AFD9e074C2e54755210007Aa"  # Our deployed AaveV3Strategy
+    compound_strategy: "0xDA9e635fAe5bB78a7b38792615b48707798d067D"  # Our deployed CompoundV3Strategy
+    network: "ethereum"
+    chain_id: 1
+  
+  base:
+    vault_factory: "TBD"
+    base_vault: "TBD"
+    wrapper_address: "TBD"
+    network: "base"
+    chain_id: 8453
+
+# RoyaltyVault Wrapper Contracts
+wrappers:
+  story:
+    vault_wrapper: "TBD"  # RoyaltyYieldWrapper on Story (to be deployed)
+    vault_factory: "TBD"  # VaultFactory contract
+  ethereum:
+    vault_wrapper: "0x670d84987005083dE65C07672241f46dA678D24A"  # Our actual vault on Ethereum
+    aave_strategy: "0x8e80115D162D0026AFD9e074C2e54755210007Aa"  # AaveV3Strategy
+    compound_strategy: "0xDA9e635fAe5bB78a7b38792615b48707798d067D"  # CompoundV3Strategy
+    vault_factory: "TBD"  # Ethereum factory
+  base:
+    vault_wrapper: "TBD"  # Base L2 deployment
+    vault_factory: "TBD"  # Base L2 factory
+
+# Yield Strategy Protocols
+protocols:
+  # Ethereum Mainnet Strategies
+  aave:
+    pool_address: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2"  # Aave V3 Pool
+    rewards_controller: "0x8164Cc65827dcFe994AB23944CBC90e0aa80bFcb"
+    supported_tokens:
+      USDC: "0xA0b86991c6218a36c1d19D4a2e9Eb0cE3606eB48"
+      USDT: "0xdAC17F958D2ee523a2206206994597C13D831ec7" 
+      WETH: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+      DAI: "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+  
+  compound:
+    comptroller: "0x3d9819210A31b4961b30EF54bE2aeD79B9c9Cd3B"
+    ctoken_usdc: "0x39AA39c021dfbaE8faC545936693aC917d5E7563"
+    ctoken_usdt: "0xf650C3d88D12dB855b8bf7D11Be6C55A4e07dCC9"
+    ctoken_eth: "0x4Ddc2D193948926D02f9B1fE9e1daa0718270ED5"
+  
+  uniswap_v3:
+    factory: "0x1F98431c8aD98523631AE4a59f267346ea31F984"
+    position_manager: "0xC36442b4a4522E871399CD717aBDD847Ab11FE88"
+    router: "0xE592427A0AEce92De3Edee1F18E0157C05861564"
+  
+  curve:
+    registry: "0x90E00ACe148ca3b23Ac1bC8C240C2a7Dd9c2d7f5"
+    factory: "0xB9fC157394Af804a3578134A6585C0dc9cc990d4"
+
+  # Cross-chain Strategies (via deBridge)
+  arbitrum_aave:
+    chain_id: 42161
+    pool_address: "0x794a61358D6845594F94dc1DB02A252b5b4814aD"
+    bridge_token_usdc: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831"
+  
+  optimism_aave:
+    chain_id: 10
+    pool_address: "0x794a61358D6845594F94dc1DB02A252b5b4814aD"
+    bridge_token_usdc: "0x7F5c764cBc14f9669B88837ca1490cCa17c31607"
+
+# Cross-chain Bridge Configuration (deBridge)
+bridge:
+  debridge:
+    api_url: "https://api.dln.trade"
+    supported_chains: [1, 42161, 10, 8453]  # Ethereum, Arbitrum, Optimism, Base
+    min_bridge_amount: 100  # $100 minimum
+    max_slippage: 0.005  # 0.5%
+    bridge_fee_threshold: 0.02  # Don't bridge if fees > 2%
+
+# Risk Management Parameters
+risk:
+  min_confidence_score: 0.7  # Conservative for IP creators
+  max_exposure_per_vault: 0.8  # Max 80% of vault deployed
+  max_exposure_per_strategy: 0.4  # Max 40% to single strategy
+  max_slippage: 0.005  # 0.5% max slippage
+  min_apr_threshold: 0.03  # 3% minimum APR to deploy
+  emergency_exit_risk_threshold: 0.8  # Exit if risk > 80%
+  
+  # Strategy-specific risk limits
+  strategy_limits:
+    aave: 0.6  # Max 60% to Aave
+    compound: 0.5  # Max 50% to Compound
+    uniswap: 0.3  # Max 30% to Uniswap
+    curve: 0.4  # Max 40% to Curve
+    cross_chain: 0.2  # Max 20% cross-chain
+
+# Optimization Settings
+optimization:
+  interval: 3600  # 1 hour between optimization cycles
+  min_balance_threshold: 10  # Minimum $10 to optimize
+  max_allocation_per_strategy: 0.8  # Max 80% to any strategy
+  emergency_exit_threshold: 0.9  # Exit if risk > 90%
+  rebalancing_threshold: 0.05  # Rebalance if APY diff > 5%
+  
+  # Reserve management
+  liquidity_reserve: 0.1  # Keep 10% liquid
+  emergency_reserve: 0.05  # Additional 5% emergency buffer
+  
+  # Performance tracking
+  min_performance_period: 86400  # 24 hours minimum before rebalancing
+  performance_benchmark: 0.04  # 4% benchmark APY
+
+# LLM Settings for Strategy Generation
+llm:
+  model: "gpt-4o-mini"
+  temperature: 0.1  # Deterministic responses for consistency
+  max_tokens: 1500  # Increased for complex strategies
+  context_window: 4000
+  
+  # Strategy prompts
+  system_prompt: |
+    You are a conservative DeFi yield optimizer for IP creators and royalty earners.
+    Prioritize safety over maximum yield. Consider:
+    - Protocol reputation and security
+    - Liquidity and exit conditions  
+    - Gas costs vs yield benefits
+    - Risk concentration limits
+    
+    IMPORTANT: Only use these supported action types:
+    - "deploy_to_strategy": Deploy funds to a specific strategy (Aave or Compound)
+    - "rebalance_strategies": Move funds between strategies  
+    - "harvest_strategy": Claim yields from a strategy
+    
+    Example action for deploying to Aave:
+    {
+      "action_type": "deploy_to_strategy",
+      "parameters": {
+        "strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+        "amount": 14224289,
+        "vault": "0x670d84987005083dE65C07672241f46dA678D24A"
+      }
+    }
+    
+    Generate strategies in JSON format with clear action sequences using ONLY these action types.
+
+# Transaction Execution Settings
+execution:
+  gas_multiplier: 1.3  # 30% gas buffer for reliability
+  max_retries: 3
+  confirmation_blocks: 2
+  timeout_seconds: 300  # 5 minutes max per transaction
+  
+  # Priority fee settings
+  max_priority_fee_gwei: 5  # Max priority fee
+  max_fee_gwei: 100  # Max total fee
+  
+  # Batch execution
+  batch_size: 5  # Max 5 operations per batch
+  batch_delay: 30  # 30 seconds between batches
+
+# Data Provider Configuration
+providers:
+  defillama:
+    api_url: "https://api.llama.fi"
+    protocol_slug: "aave-v3"
+    rate_limit: 100  # requests per minute
+  
+  etherscan:
+    api_url: "https://api.etherscan.io/api"
+    rate_limit: 200  # requests per minute
+  
+  coingecko:
+    api_url: "https://api.coingecko.com/api/v3"
+    rate_limit: 50  # requests per minute
+
+# Monitoring and Alerting
+monitoring:
+  targets:
+    # Aave V3 Pool
+    - address: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2"
+      name: "Aave V3 Pool"
+      time_window: 3600
+      threshold: 2.0
+    
+    # Compound cUSDC
+    - address: "0x39AA39c021dfbaE8faC545936693aC917d5E7563"
+      name: "Compound cUSDC"
+      time_window: 3600
+      threshold: 2.0
+
+# Supported Tokens for Optimization
+tokens:
+  # Story Protocol Tokens
+  WIP:
+    address: "0x1514000000000000000000000000000000000000"  # Story Protocol WIP token
+    decimals: 18
+    risk_tier: "low"
+    max_allocation: 0.9
+    chain: "story"
+  
+  # Ethereum Stablecoins (lowest risk)
+  USDC:
+    address: "0xA0b86991c6218a36c1d19D4a2e9Eb0cE3606eB48"
+    decimals: 6
+    risk_tier: "low"
+    max_allocation: 0.9
+    chain: "ethereum"
+  
+  USDT:
+    address: "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+    decimals: 6
+    risk_tier: "low"
+    max_allocation: 0.9
+  
+  DAI:
+    address: "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+    decimals: 18
+    risk_tier: "low"
+    max_allocation: 0.9
+  
+  # Major tokens (medium risk)
+  WETH:
+    address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    decimals: 18
+    risk_tier: "medium"
+    max_allocation: 0.7
+  
+  WBTC:
+    address: "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+    decimals: 8
+    risk_tier: "medium"
+    max_allocation: 0.6
+
+# Performance Tracking
+analytics:
+  enable_tracking: true
+  track_gas_costs: true
+  track_yield_attribution: true
+  export_csv: true
+  retention_days: 365  # Keep 1 year of data
+
+# Development and Testing
+development:
+  simulation_mode: false  # Set true for testing without real transactions
+  use_testnet: false  # Set true for testnet deployment
+  log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  enable_debug_endpoints: false

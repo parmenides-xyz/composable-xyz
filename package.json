@@ -1,0 +1,40 @@
+{
+  "name": "ai-vaults-story",
+  "version": "1.0.0",
+  "description": "AI-powered yield optimization for Story Protocol RoyaltyVaults",
+  "scripts": {
+    "test": "hardhat test",
+    "test:unit": "hardhat test test/*.test.js",
+    "test:integration": "hardhat test test/integration/*.test.js",
+    "compile": "hardhat compile",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network story_testnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network ethereum",
+    "verify": "hardhat verify --network story_testnet",
+    "test:live": "node scripts/live/test-live-connection.js",
+    "discover:vaults": "node scripts/live/discover-royalty-vaults.js",
+    "story:status": "npm run test:live && npm run discover:vaults",
+    "story:activate": "echo 'Starting Story Protocol AI Agent...' && npm run story:status",
+    "optimize": "npx ts-node scripts/royalty-optimizer-cli.ts --interactive",
+    "optimize:auto": "npx ts-node scripts/royalty-optimizer-cli.ts -i 0x3F71cB2b66F255D361d17383909C20c29737340F -y",
+    "orchestrate": "npx hardhat run scripts/orchestrate-full-pipeline.ts --network ethereum"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^4.9.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^10.0.0",
+    "@types/node": "^18.0.0",
+    "chai": "^4.3.0",
+    "dotenv": "^16.0.0",
+    "ethers": "^6.4.0",
+    "hardhat": "^2.17.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@story-protocol/core-sdk": "^1.3.2",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.10.0",
+    "tailwindcss": "^3.4.17",
+    "viem": "^2.31.3"
+  }
+}

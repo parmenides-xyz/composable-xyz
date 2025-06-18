@@ -1,0 +1,65 @@
+{
+  "chains": {
+    "localhost": {
+      "chainId": 31337,
+      "tokens": {
+        "MockUSDC": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+      },
+      "vaults": {
+        "Vault": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
+      }
+    },
+    "story": {
+      "chainId": 1514,
+      "pyth": "0x2880aB155794e7179c9eE2e38200202908C17B43",
+      "tokens": {
+        "MockUSDC": "0x72FEAa0F940303c9cC0Bb6081c7c595ff6370F35",
+        "MockWETH": "0x3FC3382cD9B7AAdC4023271134b2e2710623c63E"
+      },
+      "vaults": {
+        "Vault": "0x0b5d50e41aAE56a7F1CA3E626BC17DB4fB8bdc5a",
+        "MultiTokenVault": "0x0C75Ee2f07631154B6bf1f3fE2fF6864c11429E2"
+      }
+    },
+    "ethereum": {
+      "chainId": 1,
+      "pyth": "0x4305FB66699C3B2702D4d05CF36551390A4c69C6",
+      "tokens": {
+        "USDC": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+      },
+      "vaults": {
+        "MainVault": "0x670d84987005083dE65C07672241f46dA678D24A",
+        "AaveV3Strategy": "0x8e80115D162D0026AFD9e074C2e54755210007Aa",
+        "CompoundV3Strategy": "0xDA9e635fAe5bB78a7b38792615b48707798d067D"
+      }
+    }
+  },
+  "priceIds": {
+    "BTC_USD": "0xe62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc658afedf0f4a415b43",
+    "ETH_USD": "0xff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
+    "USDC_USD": "0xeaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a"
+  },
+  "tokenConfig": {
+    "MockUSDC": {
+      "decimals": 6,
+      "priceId": "USDC_USD",
+      "faucetAmount": "10000"
+    },
+    "MockWBTC": {
+      "decimals": 8,
+      "priceId": "BTC_USD",
+      "faucetAmount": "1"
+    },
+    "MockWETH": {
+      "decimals": 18,
+      "priceId": "ETH_USD",
+      "faucetAmount": "10"
+    }
+  },
+  "hardhat": {
+    "vaultFactory": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  },
+  "story": {
+    "vaultFactory": "0x9ac45538c6d27178650b3a50e39Afe9f0Db26Ca8"
+  }
+}
