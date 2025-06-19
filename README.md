@@ -1,14 +1,14 @@
-# Ontology Finance - AI-Powered Yield Optimization for Story Protocol
+# Ontology - AI-Powered Yield Optimization for Story Protocol
 
-> The Being of DeFi: Where Philosophy Meets Yield - Transforming IP royalties into optimized returns through AI-driven strategy execution.
+> Where Pre-Socratic Philosophy Meets DeFAI — Optimizing royalties through AI-driven strategy execution.
 
-## 💭 The Problem: $2.3 Billion in Dormant IP Royalties
+## 💭 The Problem: Billions in Dormant IP Royalties
 
 The creator economy has exploded to over $104 billion, yet most IP royalties sit idle in wallets earning zero yield. Story Protocol has revolutionized on-chain IP management, but creators lack the expertise and time to optimize their royalty streams across DeFi protocols. This results in an estimated **$2.3 billion in unrealized yield annually** - passive income lost while creators focus on creating.
 
 ## 🚀 Our Solution: AI-Powered IP Yield Optimization
 
-Ontology Finance is the first **AI DeFi (DeFAI)** protocol specifically designed for Story Protocol royalties. We automatically claim, bridge, and optimize IP royalty yields across multiple DeFi protocols using advanced AI models. Think of us as **AI-governed Yearn-meets-Story** - but with a philosophical twist inspired by Parmenidean metaphysics.
+Ontology is the first **AI DeFi (DeFAI)** protocol specifically designed for Story Protocol royalties. We automatically claim, bridge, and optimize IP royalty yields across multiple DeFi protocols using advanced AI models. Think of us as **AI-governed Yearn-meets-Story** - but with a philosophical twist inspired by Parmenidean metaphysics.
 
 ## 📊 How It Works in 3 Simple Steps
 
@@ -46,7 +46,7 @@ Our AI allocates capital automatically between these strategies based on:
 
 ## 🎭 The Philosophy: Why "Ontology Finance"?
 
-Inspired by Parmenides' concept of "Being," we believe yield optimization should be **eternal and unchanging** - not subject to human emotion or market panic. Our AI embodies this philosophy:
+Inspired by the philosophy of Parmenides we believe DeFi strategy should be **eternal and unchanging** - not subject to human emotion or market panic. Our AI embodies this philosophy:
 
 - **The One**: All royalties flow to a single optimized state
 - **The Eternal**: Continuous, 24/7 optimization without rest
@@ -106,14 +106,13 @@ DeFi Protocols (Aave/Compound)
 ## 🤝 Sponsor Integrations
 
 ### deBridge
-We deeply integrated deBridge for seamless cross-chain royalty optimization:
-- **Instant Bridging**: Story Protocol → Ethereum in under 2 minutes
-- **Cost Efficiency**: 67% cheaper than alternative bridges
+We integrated deBridge for seamless cross-chain royalty optimization:
+- **Instant Bridging**: Story Protocol → Ethereum instantly
 - **Reliability**: 99.9% uptime with automatic retry mechanisms
 - **Future Expansion**: Ready for multi-chain yield strategies
 
 ### Story Protocol
-As a Story Protocol-first solution, we've built deep integrations:
+As a Story-first solution, we've built deep integrations:
 - **RoyaltyModule**: Direct integration for automated claiming
 - **IPAssetRegistry**: Track all IP assets and their royalties
 - **VaultFactory**: Deploy personalized vaults for large IP portfolios
