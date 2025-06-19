@@ -1,6 +1,6 @@
 # Ontology - AI-Powered Yield Optimization for Story Protocol
 
-> Where Pre-Socratic Philosophy Meets DeFAI — Optimizing royalties through AI-driven strategy execution.
+> Where Pre-Socratic philosophy meets DeFAI — Optimizing royalties through AI-driven strategy execution.
 
 ## 💭 The Problem: Billions in Dormant IP Royalties
 
